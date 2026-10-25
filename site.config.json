@@ -1,0 +1,22 @@
+{
+  "name": "TikSave",
+  "siteUrl": "https://SIZIN-DOMAIN.com",
+  "defaultLang": "tr",
+  "nav": {
+    "tr": [
+      ["Ana sayfa", "/"],
+      ["TikTok MP3 indir", "/tiktok-mp3-indir/"],
+      ["iPhone", "/iphone-tiktok-video-indirme/"],
+      ["Blog", "/blog/"]
+    ]
+  },
+  "footer": {
+    "tr": "TikSave, TikTok veya ByteDance ile bağlantılı değildir. İçerik barındırmıyoruz; tüm haklar ilgili sahiplerine aittir. Yalnızca kendi içeriğinizi veya indirme izniniz olan içerikleri kaydedin."
+  },
+  "footerLinks": {
+    "tr": [["Gizlilik Politikası", "/gizlilik/"]]
+  },
+  "blog": {
+    "tr": { "title": "Blog", "description": "TikTok video indirme hakkında rehberler ve ipuçları." }
+  }
+}
