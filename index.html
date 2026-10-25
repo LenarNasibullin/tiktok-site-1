@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok Video İndirici – Filigransız MP4 ve MP3 İndir</title>
+<meta name="description" content="TikTok videolarını filigransız ve ücretsiz indirin. Bağlantıyı yapıştırın, MP4 veya MP3 olarak telefonunuza ya da bilgisayarınıza kaydedin.">
+<!-- Когда купите домен, замените адрес ниже -->
+<link rel="canonical" href="https://SIZIN-DOMAIN.com/">
+<style>
+  :root {
+    --bg: #eef2f4;
+    --ink: #10222b;
+    --muted: #51626b;
+    --card: #ffffff;
+    --line: #cfd9de;
+    --accent: #0b7a75;
+    --accent-ink: #ffffff;
+    --error: #b4232f;
+  }
+  * { box-sizing: border-box; }
+  html { color-scheme: light; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  header .wrap { font-weight: 700; font-size: 1.1rem; letter-spacing: .2px; }
+  h1 { font-size: clamp(1.9rem, 6vw, 2.9rem); line-height: 1.15; margin: 48px 0 12px; }
+  .lead { color: var(--muted); margin: 0 0 28px; max-width: 56ch; }
+  form { display: flex; gap: 10px; flex-wrap: wrap; }
+  input[type=url] {
+    flex: 1 1 280px; min-width: 0;
+    padding: 16px 18px; font: inherit;
+    border: 2px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink);
+  }
+  input[type=url]:focus-visible, button:focus-visible, a:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--accent); outline-offset: 2px;
+  }
+  button, .btn {
+    padding: 16px 28px; font: inherit; font-weight: 700; cursor: pointer; text-decoration: none;
+    border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-ink);
+    display: inline-block; text-align: center;
+  }
+  button[disabled] { opacity: .6; cursor: progress; }
+  .btn.alt { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+  #status { min-height: 1.6em; margin: 14px 0 0; color: var(--muted); }
+  #status.error { color: var(--error); font-weight: 600; }
+  #result {
+    display: none; margin-top: 20px; padding: 16px; gap: 16px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  }
+  #result.show { display: flex; flex-wrap: wrap; }
+  #result img { width: 120px; height: 160px; object-fit: cover; border-radius: 8px; background: var(--line); }
+  #result .info { flex: 1 1 240px; min-width: 0; }
+  #result .author { font-weight: 700; margin: 0; }
+  #result .title { margin: 4px 0 14px; color: var(--muted); overflow-wrap: anywhere; }
+  #result .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  section { margin-top: 56px; }
+  h2 { font-size: 1.5rem; margin: 0 0 14px; }
+  ol { padding-left: 1.3em; margin: 0; }
+  li { margin-bottom: 8px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { margin-top: 64px; padding: 24px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<header><div class="wrap">TikSave</div></header>
+
+<main class="wrap">
+  <h1>TikTok videolarını filigransız indirin</h1>
+  <p class="lead">Video bağlantısını yapıştırın, MP4 veya MP3 olarak kaydedin. Ücretsiz, kayıt gerekmez.</p>
+
+  <form id="form" novalidate>
+    <input type="url" id="url" placeholder="TikTok video bağlantısını buraya yapıştırın" aria-label="TikTok video bağlantısı" autocomplete="off" required>
+    <button type="submit" id="go">İndir</button>
+  </form>
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <div id="result">
+    <img id="cover" alt="Video kapak görseli">
+    <div class="info">
+      <p class="author" id="author"></p>
+      <p class="title" id="title"></p>
+      <div class="actions">
+        <a class="btn" id="dlVideo" href="#">MP4 indir</a>
+        <a class="btn alt" id="dlMusic" href="#">MP3 indir</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>TikTok videosu filigransız nasıl indirilir?</h2>
+    <ol>
+      <li>TikTok uygulamasını veya tiktok.com sitesini açın ve indirmek istediğiniz videoyu bulun.</li>
+      <li>Paylaş düğmesine dokunun ve “Bağlantıyı kopyala” seçeneğini seçin.</li>
+      <li>Bu sayfaya dönün, bağlantıyı kutuya yapıştırın ve “İndir” düğmesine basın.</li>
+      <li>“MP4 indir” veya “MP3 indir” düğmesine basın ve birkaç saniye bekleyin.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Sık sorulan sorular</h2>
+    <details>
+      <summary>İndirme ücretsiz mi?</summary>
+      <p>Evet, özelliklerde bir sınırlama olmadan ücretsizdir.</p>
+    </details>
+    <details>
+      <summary>iPhone'da nasıl indirebilirim?</summary>
+      <p>iOS 13 ve üzeri sürümlerde Safari tarayıcısını kullanın. Dosya, Safari'nin indirilenler listesine kaydedilir.</p>
+    </details>
+    <details>
+      <summary>Android ve bilgisayarda çalışır mı?</summary>
+      <p>Evet. Chrome, Firefox ve diğer tarayıcılarda herhangi bir program kurmadan çalışır.</p>
+    </details>
+    <details>
+      <summary>Video nereye kaydediliyor?</summary>
+      <p>Tarayıcınızın “İndirilenler” klasörüne. Bulamazsanız tarayıcının indirme geçmişine bakın.</p>
+    </details>
+    <details>
+      <summary>Video bulunamadı hatası alıyorum.</summary>
+      <p>Bağlantının doğru kopyalandığından emin olun. Gizli veya silinmiş videolar indirilemez.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">TikSave, TikTok veya ByteDance ile bağlantılı değildir. İçerik barındırmıyoruz; tüm haklar ilgili sahiplerine aittir. Yalnızca kendi içeriğinizi veya indirme izniniz olan içerikleri kaydedin.</div>
+</footer>
+
+<script>
+  var form = document.getElementById('form');
+  var input = document.getElementById('url');
+  var go = document.getElementById('go');
+  var statusEl = document.getElementById('status');
+  var result = document.getElementById('result');
+
+  function setStatus(text, isError) {
+    statusEl.textContent = text;
+    statusEl.className = isError ? 'error' : '';
+  }
+
+  function fileLink(fileUrl, type) {
+    return '/api/download?type=' + type + '&u=' + encodeURIComponent(fileUrl);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var link = input.value.trim();
+    result.classList.remove('show');
+
+    if (!/^https?:\/\/((www|m|vm|vt)\.)?tiktok\.com\//i.test(link)) {
+      setStatus('Geçerli bir TikTok bağlantısı girin.', true);
+      return;
+    }
+
+    go.disabled = true;
+    setStatus('Video aranıyor, lütfen birkaç saniye bekleyin…', false);
+
+    fetch('/api/info?url=' + encodeURIComponent(link))
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, data: j }; }); })
+      .then(function (res) {
+        if (!res.ok) {
+          setStatus('Video bulunamadı. Bağlantıyı kontrol edin; video gizli veya silinmiş olabilir.', true);
+          return;
+        }
+        var d = res.data;
+        document.getElementById('author').textContent = d.author;
+        document.getElementById('title').textContent = d.title;
+        var cover = document.getElementById('cover');
+        if (d.cover) { cover.src = d.cover; cover.style.display = ''; } else { cover.style.display = 'none'; }
+        document.getElementById('dlVideo').href = fileLink(d.video, 'mp4');
+        var music = document.getElementById('dlMusic');
+        if (d.music) { music.href = fileLink(d.music, 'mp3'); music.style.display = ''; } else { music.style.display = 'none'; }
+        result.classList.add('show');
+        setStatus('Hazır! İndirmek için düğmeye basın.', false);
+      })
+      .catch(function () {
+        setStatus('Bir hata oluştu. Biraz sonra tekrar deneyin.', true);
+      })
+      .then(function () { go.disabled = false; });
+  });
+</script>
+</body>
+</html>
